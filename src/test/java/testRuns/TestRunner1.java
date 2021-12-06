@@ -3,14 +3,18 @@ package testRuns;
 import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
+
+
 
 
 @RunWith(Cucumber.class)
 
 
 @CucumberOptions(
-		features = "src/test/resources/features/sprint1/feature1.feature",
+		features = "src/test/resources/features/sprint1",
 		glue = {"stepdefinition","setHooks"},
 		monochrome =false,
 		dryRun = false
@@ -19,6 +23,6 @@ import io.cucumber.junit.CucumberOptions;
 		
 		)
 
-public class TestRunner1 {
+public class TestRunner1 extends AbstractTestNGCucumberTests {
 
 }
